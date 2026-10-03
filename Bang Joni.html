@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BangJoniWeb</title>
+  <style>
+    /* RESET STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: black;
+      padding: 10px;
+      color: #111827; 
+    }
+
+    /* CONTAINER GRID */
+    .grid-container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;               /* Jarak antar kartu sedikit diperbesar */
+      box-sizing: border-box;
+    }
+
+    /* AREA GAMBAR (DENGAN ASPEK RASIO 3:4) */
+    .card-img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background-color: #e5e7eb;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* DESAIN KARTU */
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+
+    /* BODY KARTU */
+    .card-body {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      text-align: center;
+      gap: 10px;
+    }
+
+    /* JUDUL ARTIKEL (UKURAN DIPERBESAR & ADAPTIF) */
+    .card-title {
+      font-size: clamp(40px, 4vw, 16px); /* Otomatis menyesuaikan lebar layar */
+      font-weight: 700;
+      color: #111827;
+      text-decoration: none;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;             /* Diperluas hingga 3 baris agar teks panjang muat */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* TOMBOL SELENGKAPNYA (LEBIH BESAR & NYAMAN DIDIKLIK) */
+    .card-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background-color: #3b82f6;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: clamp(30px, 3.5vw, 15px); /* Ukuran font tombol lebih jelas */
+      font-weight: 600;
+      padding: 10px 14px;                  /* Tombol lebih tebal/empuk */
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+
+    .card-btn:hover {
+      background-color: #2563eb;
+    }
+
+    /* TOMBOL SCROLL TO TOP */
+    .scroll-top {
+      position: fixed;
+      bottom: 25px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+
+    <!-- KARTU 1 -->
+    <div class="card">
+      <a class="card-img" href="https://link-tujuan-1.com" target="_blank">
+        <img src="gambar/Tak berjudul15.png" alt="Landing Page">
+      </a>
+      <div class="card-body">
+        <a class="card-title" href="https://link-tujuan-1.com" target="_blank">
+          Judul
+        </a>
+        <a class="card-btn" href="https://link-tujuan-1.com" target="_blank">
+          Link &#10140;
+        </a>
+      </div>
+    </div>
+
+    <!-- KARTU 2 -->
+    <div class="card">
+      <a class="card-img" href="https://link-tujuan-2.com" target="_blank">
+        <img src="gambar/Tak berjudul15.png" alt="Keyword Blogger">
+      </a>
+      <div class="card-body">
+        <a class="card-title" href="https://link-tujuan-2.com" target="_blank">
+          Judul
+        </a>
+        <a class="card-btn" href="https://link-tujuan-2.com" target="_blank">
+          Link &#10140;
+        </a>
+      </div>
+    </div>
+
+    <!-- KARTU 3 -->
+    <div class="card">
+      <a class="card-img" href="https://link-tujuan-3.com" target="_blank">
+        <img src="gambar/Tak berjudul15.png" alt="Blogspot vs WordPress">
+      </a>
+      <div class="card-body">
+        <a class="card-title" href="https://link-tujuan-3.com" target="_blank">
+          Judul
+        </a>
+        <a class="card-btn" href="https://link-tujuan-3.com" target="_blank">
+          Link &#10140;
+        </a>
+      </div>
+    </div>
+
+    <!-- KARTU 4 -->
+    <div class="card">
+      <a class="card-img" href="https://link-tujuan-4.com" target="_blank">
+        <img src="gambar/Tak berjudul15.png" alt="Profil Bengkel Motor">
+      </a>
+      <div class="card-body">
+        <a class="card-title" href="https://link-tujuan-4.com" target="_blank">
+          Judul
+        </a>
+        <a class="card-btn" href="https://link-tujuan-4.com" target="_blank">
+          Link &#10140;
+        </a>
+      </div>
+    </div>
+
+    <!-- KARTU 5 -->
+    <div class="card">
+      <a class="card-img" href="https://link-tujuan-5.com" target="_blank">
+        <img src="gambar/Tak berjudul15.png" alt="Kecepatan Blog">
+      </a>
+      <div class="card-body">
+        <a class="card-title" href="https://link-tujuan-5.com" target="_blank">
+          Judul
+        </a>
+        <a class="card-btn" href="https://link-tujuan-5.com" target="_blank">
+          Link &#10140;
+        </a>
+      </div>
+    </div>
+
+    <!-- KARTU 6 -->
+    <div class="card">
+      <a class="card-img" href="https://link-tujuan-6.com" target="_blank">
+        <img src="gambar/Tak berjudul15.png" alt="Template Blogger">
+      </a>
+      <div class="card-body">
+        <a class="card-title" href="https://link-tujuan-6.com" target="_blank">
+          Judul
+        </a>
+        <a class="card-btn" href="https://link-tujuan-6.com" target="_blank">
+          Link &#10140;
+        </a>
+      </div>
+    </div>
+        
+    <!-- KARTU 7 -->
+    <div class="card">
+      <a class="card-img" href="https://link-tujuan-6.com" target="_blank">
+        <img src="gambar/Tak berjudul15.png" alt="Template Blogger">
+      </a>
+      <div class="card-body">
+        <a class="card-title" href="https://link-tujuan-6.com" target="_blank">
+          Judul
+        </a>
+        <a class="card-btn" href="https://link-tujuan-6.com" target="_blank">
+          Link &#10140;
+        </a>
+      </div>
+    </div>
+    
+    <!-- KARTU 8 -->
+    <div class="card">
+      <a class="card-img" href="https://link-tujuan-6.com" target="_blank">
+        <img src="gambar/Tak berjudul15.png" alt="Template Blogger">
+      </a>
+      <div class="card-body">
+        <a class="card-title" href="https://link-tujuan-6.com" target="_blank">
+          Judul
+        </a>
+        <a class="card-btn" href="https://link-tujuan-6.com" target="_blank">
+          Link &#10140;
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
